@@ -1,0 +1,85 @@
+sv_cheats 1 7AC33AFE - 89 46 30  - mov [esi+30],eax
+r_drawothermodels 2 33FE1EBE - 89 46 30  - mov [esi+30],eax
+//Mouse Sensitivity ("VISUAL" before clicking apply just "VISUAL") 42C87C93 - F3 0F11 86 A0010000  - movss [esi+000001A0],xmm0
+Mouse Sensitivity (real sensitivity) 33FE1FC9 - F3 0F11 46 2C  - movss [esi+2C],xmm0
+Gamma 78919349 - F3 0F11 46 2C  - movss [esi+2C],xmm0
+sv_accelerate 381E746E - 89 46 30  - mov [esi+30],eax
+sv_airaccelerate 381E746E - 89 46 30  - mov [esi+30],eax
+
+sv_password 7ACAC9B9 - 89 17  - mov [edi],edx """"AND"""" 7ACAC9CF - 88 07  - mov [edi],al """"AND"""" 7AC33EDD - C6 44 30 FF 00 - mov byte ptr [eax+esi-01],00  EAX=041E0D50
+EBX=00FED9DC
+ECX=00000000
+EDX=73676F64
+ESI=00000005
+EDI=7B076E58
+ESP=00FECD40
+EBP=00FECD68
+EIP=7AC33EE2
+
+net_graph (FPS) 2529A090 - D9 58 34  - fstp dword ptr [eax+34]
+
+sv_allowcslua 381E746E - 89 46 30  - mov [esi+30],eax
+r_3dsky 358E1EBE - 89 46 30  - mov [esi+30],eax
+r_drawrenderboxes 358E1EBE - 89 46 30  - mov [esi+30],eax
+mat_dxlevel 7891923E - 89 46 30  - mov [esi+30],eax
+
+Superior server Hunger 43471CFB - 89 69 04  - mov [ecx+04],ebp """"AND"""" 43471CFE - 89 01  - mov [ecx],eax
+Superior server Money 43471CFB - 89 69 04  - mov [ecx+04],ebp """"AND""""" 43471CFE - 89 01  - mov [ecx],eax
+Superior server Health hud and Visual Color (when you have low hp the screen changes color) 35F07D59 - 89 17  - mov [edi],edx
+Superior server Health 35C3A0EC - 89 08  - mov [eax],ecx
+
+//Superior server Respawn Timer 43482CBA - 89 08  - mov [eax],ecx """"AND"""" 43482CBF - 89 48 04  - mov [eax+04],ecx
+EAX=5B600530
+EBX=04748B74
+ECX=40260000
+EDX=5C332130
+ESI=338301C0
+EDI=0AE0BBA0
+ESP=00B7D9B0
+EBP=00B7D9C0
+EIP=43482CC2
+
+Superior server Karma 43471CFB - 89 69 04  - mov [ecx+04],ebp """"AND"""" 43471CFE - 89 01  - mov [ecx],eax
+EAX=00000000
+EBX=33830D10
+ECX=5B61ECE8
+EDX=5D803768
+ESI=4B218748
+EDI=4B218770
+ESP=00B7D408
+EBP=40550000
+EIP=43471D00
+
+Superior server Ammo (done with pistol) 35F07D59 - 89 17  - mov [edi],edx
+EAX=00000004
+EBX=0045F563
+ECX=00000001
+EDX=0000000C
+ESI=6BF72778
+EDI=0E096EEC
+ESP=00B6D060
+EBP=00B6D36C
+EIP=35F07D5B
+
+Superior server Ammo reserve (waiting to be loaded) 35F0789C - 73 09 - jae 35F078A7
+
+Sandbox .357 pistol 35E80D31 - 89 03  - mov [ebx],eax
+Sandbox .357 pistol reload 35ADBDEA - 89 87 A4150000  - mov [edi+000015A4],eax
+Sandbox 9mm 352D6011 - 89 87 A4150000  - mov [edi+000015A4],eax
+Sandbox 9mm Reload 34F2BDEA - 89 87 A4150000  - mov [edi+000015A4],eax
+Sandbox crossbow 35E831B8 - 89 03  - mov [ebx],eax
+Sandbox Crossbow 35ADBDEA - 89 87 A4150000  - mov [edi+000015A4],eax
+Sandbox Pulse-Rifle 35E86011 - 89 87 A4150000  - mov [edi+000015A4],eax
+Sandbox Pulse-Rifle Reload 35ADBDEA - 89 87 A4150000  - mov [edi+000015A4],eax
+Sandbox RPG Launcher 35AD7623 - 89 33  - mov [ebx],esi
+Sandbox S.L.A.M 35AD7623 - 89 33  - mov [ebx],esi
+Sandbox Shotgun 35E9358B - 89 03  - mov [ebx],eax
+Sandbox Shotgun Reload 35E6EEA1 - 89 06  - mov [esi],eax
+
+
+
+
+
+
+
+
