@@ -1,10 +1,33 @@
-sv_cheats 1 7AC33AFE - 89 46 30  - mov [esi+30],eax
-r_drawothermodels 2 33FE1EBE - 89 46 30  - mov [esi+30],eax
+sv_cheats 1 7AC33AFE - 89 46 30  - mov [esi+30],eax //engine.dll+690C68
+
+r_drawothermodels 2 78E31EBE - 89 46 30  - mov [esi+30],eax //client.dll+6852A8
+EAX=00000002
+EBX=790B5278
+ECX=00004008
+EDX=00000000
+ESI=790B5278
+EDI=012FDBDC
+ESP=012FCF78
+EBP=012FCFA8
+EIP=78E31EC1
+
 //Mouse Sensitivity ("VISUAL" before clicking apply just "VISUAL") 42C87C93 - F3 0F11 86 A0010000  - movss [esi+000001A0],xmm0
 Mouse Sensitivity (real sensitivity) 33FE1FC9 - F3 0F11 46 2C  - movss [esi+2C],xmm0
 Gamma 78919349 - F3 0F11 46 2C  - movss [esi+2C],xmm0
 sv_accelerate 381E746E - 89 46 30  - mov [esi+30],eax
 sv_airaccelerate 381E746E - 89 46 30  - mov [esi+30],eax
+
+// main password I use engine.dll+6A2570
+// password bullshit engine.dll+6A2770 engine.dll+6A2570 engine.dll+6A051C 04480D50
+6A9D7450 - 89 30  - mov [eax],esi
+796FC9B9 - 89 17  - mov [edi],edx
+796FC9CF - 88 07  - mov [edi],al
+79690A3A - C6 04 30  00 - mov byte ptr [eax+esi],00
+796FC9B9 - 89 17  - mov [edi],edx
+7968ABFB - C6 03 00 - mov byte ptr [ebx],00
+7968ADD2 - 88 0B  - mov [ebx],cl
+7968AE6A - 88 0C 07   - mov [edi+eax],cl
+\\
 
 sv_password 7ACAC9B9 - 89 17  - mov [edi],edx """"AND"""" 7ACAC9CF - 88 07  - mov [edi],al """"AND"""" 7AC33EDD - C6 44 30 FF 00 - mov byte ptr [eax+esi-01],00  EAX=041E0D50
 EBX=00FED9DC
@@ -16,9 +39,19 @@ ESP=00FECD40
 EBP=00FECD68
 EIP=7AC33EE2
 
-net_graph (FPS) 2529A090 - D9 58 34  - fstp dword ptr [eax+34]
+net_graph (FPS) 2529A090 - D9 58 34  - fstp dword ptr [eax+34] //client.dll+713880
 
-sv_allowcslua 381E746E - 89 46 30  - mov [esi+30],eax
+sv_allowcslua 3580746E - 89 46 30  - mov [esi+30],eax //server.dll+942298
+EAX=00000001
+EBX=35B12268
+ECX=00002184
+EDX=00000000
+ESI=35B12268
+EDI=012FD8EC
+ESP=012FCC88
+EBP=012FCCB8
+EIP=35807471
+
 r_3dsky 358E1EBE - 89 46 30  - mov [esi+30],eax
 r_drawrenderboxes 358E1EBE - 89 46 30  - mov [esi+30],eax
 mat_dxlevel 7891923E - 89 46 30  - mov [esi+30],eax
@@ -76,10 +109,143 @@ Sandbox S.L.A.M 35AD7623 - 89 33  - mov [ebx],esi
 Sandbox Shotgun 35E9358B - 89 03  - mov [ebx],eax
 Sandbox Shotgun Reload 35E6EEA1 - 89 06  - mov [esi],eax
 
+Superior server MilitaryRP M4A1 78EA7D59 - 89 17  - mov [edi],edx
+EAX=00000004
+EBX=001378E7
+ECX=00000001
+EDX=0000001D
+ESI=70F30188
+EDI=0D8DA2EC
+ESP=001BCDEC
+EBP=001BD0F8
+EIP=78EA7D5B
 
+thirdperson to firstperson (command) 78C17F65 - C6 81 8D000000 00 - mov byte ptr [ecx+0000008D],00
+EAX=00000000
+EBX=79AD2A00
+ECX=791793D8
+EDX=00000000
+ESI=7913B8D0
+EDI=79AD255C
+ESP=001CDB5C
+EBP=001CDB68
+EIP=78C17F6C
 
+cl_predictweapons 78E31EBE - 89 46 30  - mov [esi+30],eax
+EBX=79140518
+ECX=00000208
+EDX=00000000
+ESI=79140518
+EDI=001CD76C
+ESP=001CCB08
+EBP=001CCB38
+EIP=78E31EC1
 
+cl_predict 78E31EBE - 89 46 30  - mov [esi+30],eax
+EBX=790C4B10
+ECX=00000208
+EDX=00000000
+ESI=790C4B10
+EDI=001CD76C
+ESP=001CCB08
+EBP=001CCB38
+EIP=78E31EC1
 
+host_timescale 79683AFE - 89 46 30  - mov [esi+30],eax
+EAX=00000003
+EBX=79AE5F98
+ECX=00006000
+EDX=00000000
+ESI=79AE5F98
+EDI=001CD76C
+ESP=001CCB08
+EBP=001CCB38
+EIP=79683B01
 
+host_framerate 79683AFE - 89 46 30  - mov [esi+30],eax
+EAX=00000032
+EBX=79AE5F50
+ECX=00006000
+EDX=00000000
+ESI=79AE5F50
+EDI=012FDBDC
+ESP=012FCF78
+EBP=012FCFA8
+EIP=79683B01
 
+snd_show 79683AFE - 89 46 30  - mov [esi+30],eax
+EAX=00000001
+EBX=79860238
+ECX=00004000
+EDX=00000000
+ESI=79860238
+EDI=012FDBDC
+ESP=012FCF78
+EBP=012FCFA8
+EIP=79683B01
 
+snd_visualize 79683AFE - 89 46 30  - mov [esi+30],eax
+EAX=00000001
+EBX=79860280
+ECX=00004000
+EDX=00000000
+ESI=79860280
+EDI=012FDBDC
+ESP=012FCF78
+EBP=012FCFA8
+EIP=79683B01
+
+mat_fullbright 79F0923E - 89 46 30  - mov [esi+30],eax //materialsystem.dll+2118610
+EAX=00000001
+EBX=551DE020
+ECX=00804000
+EDX=00000000
+ESI=7BF985E0
+EDI=044C4888
+ESP=012FDBE8
+EBP=012FDC18
+EIP=79F09241
+
+r_drawparticles 78E31EBE - 89 46 30  - mov [esi+30],eax //client.dll+70F308
+EAX=00000001
+EBX=7913F2D8
+ECX=00004008
+EDX=00000000
+ESI=7913F2D8
+EDI=012FD8EC
+ESP=012FCC88
+EBP=012FCCB8
+EIP=78E31EC1
+
+Sandbox Loosing Health 35391388 - 89 06  - mov [esi],eax //56A19E00
+EAX=0000005A
+EBX=012FD738
+ECX=00000005
+EDX=7983DE60
+ESI=56A19E00
+EDI=56A19D20
+ESP=012FD550
+EBP=012FD56C
+EIP=3539138A
+
+Sandbox Gaining Health 352A1035 - 89 1E  - mov [esi],ebx
+EAX=00000004
+EBX=00000064
+ECX=00000004
+EDX=7983DE88
+ESI=56A19E00
+EDI=56A19D20
+ESP=012FD83C
+EBP=012FD848
+EIP=352A1037
+
+rcon_password 79683AFE - 89 46 30  - mov [esi+30],eax //engine.dll+691550
+EAX=0000000B
+EBX=79AC1520
+ECX=20020000
+EDX=00000000
+ESI=79AC1520
+EDI=012FD8EC
+ESP=012FCC88
+EBP=012FCCB8
+EIP=79683B01
