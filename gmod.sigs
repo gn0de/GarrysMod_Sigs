@@ -831,3 +831,53 @@ EDI=01371970
 ESP=00D2D17C
 EBP=00D2D1C0
 EIP=3B642825
+
+// engine.dll+629B48
+r_drawfuncdetail 782C3AFE - 89 46 30  - mov [esi+30],eax // \x89\x46\x00\xf7\xc1 xx?xx
+EAX=00000001
+EBX=78699B18
+ECX=00004000
+EDX=00000000
+ESI=78699B18
+EDI=0023D61C
+ESP=0023C9B8
+EBP=0023C9E8
+EIP=782C3B01
+
+// engine.dll+430538
+voice_steal 782C3AFE - 89 46 30  - mov [esi+30],eax // \x89\x46\x00\xf7\xc1 xx?xx
+EAX=00002707
+EBX=784A0508
+ECX=00000000
+EDX=00000000
+ESI=784A0508
+EDI=0023D61C
+ESP=0023C9B8
+EBP=0023C9E8
+EIP=782C3B01
+
+// \x88\x1f\x8a\x45 xxxx
+NOCLIP (not the command just the action of going noclip without console) 79642ABA - 88 1F  - mov [edi],bl
+// I put everything because I wanted to look more into this
+79642AB3 - 8B CE  - mov ecx,esi
+79642AB5 - E8 166BEAFF - call server.dll+895D0
+79642ABA - 88 1F  - mov [edi],bl <<
+79642ABC - 8A 45 0C  - mov al,[ebp+0C]
+79642ABF - 8D 9E 3B010000  - lea ebx,[esi+0000013B]
+
+EAX=00000002
+EBX=00000008
+ECX=00000002
+EDX=7847DE60
+ESI=59967C60
+EDI=59967D9A
+ESP=0023D764
+EBP=0023D770
+EIP=79642ABC
+
+// accesses to noclip
+server.dll+25E715 
+cmp byte ptr [edi+0000013A],08
+\x80\xbf\x3a\x01\x00\x00\x00\x0f\x95 xxxxxx?xx
+
+	
